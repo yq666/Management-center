@@ -109,13 +109,56 @@
     width: 100%;
     height: 220px;
 }
+.video .bd1{
+    height: 40px;
+    width: 100%;
+    background: #000;
+    margin-top: -40px;
+    filter: alpha(opacity=70);
+    opacity: .5;
+    position: static;
+    background-color: rgba(0,0,0,0.7);
+}
+.video p{
+    cursor: default;
+    font-size: 18px;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -40px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.video .video-img2 {
+    height: 59px;
+    width: 61px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    cursor: pointer;
+}
+.modal-header{
+    padding: 10px;
+}
+.close{
+    position: relative;
+    top: 60px;
+    right: 170px;
+}
+video{
+    width: 100%;
+    position: fixed;
+    top: 30px;
+    z-index: 1111;
+}
 /*模块*/
 .modular div{
     height: 100px;
     width: 197px;
     float: left;
     border: 1px solid #ccc;
-    padding: 4px 15px;
     box-sizing: border-box;
     box-shadow: 2px 2px 2px #ccc;
     margin-right:20px;
@@ -129,14 +172,16 @@
 }
 .modular div a img{
     float: left;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    margin-left: 15px;
 }
 .modular div a h4{
-    padding-top: 5px;
+    padding-top: 30px;
     display: block;
-    font-size: 16px;
-    padding-left: 80px;
+    font-size: 18px;
+    padding-left: 100px;
     font-weight: bold;
 }
 /*通知公告*/
@@ -198,11 +243,10 @@
 .imglink{
     width: 100%;
     height: 180px;
-    margin-bottom:100px;
+    margin-bottom:80px;
 }
 .imglink .imglink-item a{
     display: block;
-   /* background-color: #fff;*/
     padding: 10px;
     text-decoration: none;
 }
@@ -242,4 +286,24 @@
 .imglink-item :hover .itme-title{
     opacity: 1;
     top: 0px;
+}
+/*底部*/
+.footer{
+    width: 100%;
+    height: 220px;
+    background-color: #1A83C5;
+}
+.footer-link h3{
+    text-align: center;
+    color:#fff;
+    background-color: #1A83C5;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee
 }
