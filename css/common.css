@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-09-21 15:11:41
+ * @version $Id$
+ */
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+li{
+	list-style: none;
+}
+.header{
+	width: 100%;
+	height: 180px;
+}
+.header-title{
+	padding-top: 20px;;
+}
+.header-title .logo{
+	float: left;
+	width: 85px;
+	height: 85px;
+	margin-left: 40px;
+}
+.header-title .logo img{
+	width: 100%;
+	height: 100%;
+}
+.header-title .logo-title{
+	padding-top: 15px;
+}
+.header-title .logo-title img{
+	float: left;
+}
+.header-title .logo-title p{
+	display: block;
+	float: left;
+	font-size: 32px;
+	color: #1A83C5;
+	font-weight: bold;
+	padding-top: 5px;
+	letter-spacing:2px;
+}
+.header-title .search{
+    top: 39px;
+    height: 35px;
+    position: absolute;
+    float: left;
+    right: 110px;
+}
+.header-title .search input{
+	padding: 7px;
+	border-radius: 2px;
+	color: #666;
+	padding-right: 35px;
+	box-sizing: border-box;
+	outline: none;
+	font-size: 14px;
+	border: 1px solid #999;
+	box-shadow: 0 1px 2px rgba(0,0,0,.25);
+}
+.header-title .search .submit{
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	position: absolute;
+	right: 1px;
+	top: 4px;
+	color: #777;
+	line-height: 30px;
+	font-size: 16px;
+}
+.header .nav{
+    height: 45px;
+    float: left;
+    color: #fff;
+    background-color: #1A83C5;
+    width: 100%;
+    margin-top: 30px;
+}
+.header .nav ul li{
+	list-style: none;
+	float: left;
+	line-height: 45px;
+	margin-left: 7px;
+	position: relative;
+}
+.header .nav ul li .active{
+	background: #337ab0;
+}
+.header .nav ul li a{
+	color:#fff;
+	display:block;
+	height: 100%;
+	font-size: 16px;
+	padding:0px 35px;
+	text-decoration:none;
+}
+.header .nav ul li:hover a{
+	/*color: #000;*/
+}
+.header .nav .sub-nav {
+    background-color: #1A83C5;
+    z-index: 99;
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+.header .nav .sub-nav a {
+    color: #fff!important;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    border: none!important;
+    line-height: 1.5;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+.header .nav li:hover .sub-nav{
+	display: block;
+}
+.header .nav .sub-nav a:hover{
+	background: #337ab0;
+}
