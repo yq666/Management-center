@@ -35,31 +35,31 @@
 		<div class="nav">
 			<div class="container">
 				<ul>
-					<li class="active"><a href="javascript:;">首页</a></li>
-					<li>
-						<a href="javascript:;">中心介绍</a>
+					<li class="active hid" ><a href="javascript:;">首页</a></li>
+					<li class="hid">
+						<a href="datalis/Center.html">中心介绍</a>
 						<div class="sub-nav">
 							<a href="javascript:;">中心简介</a>
 							<a href="javascript:;">组织架构</a>
 							<a href="javascript:;">中心特色</a>
 						</div>
 					</li>
-					<li>
+					<li class="hid">
 						<a href="javascript:;">新闻动态</a>
 						<div class="sub-nav">
 							<a href="javascript:;">通知公告</a>
 							<a href="javascript:;">新闻动态</a>
 						</div>
 					</li>
-					<li><a href="javascript:;">师资队伍</a></li>
-					<li>
+					<li class="hid"><a href="javascript:;">师资队伍</a></li>
+					<li class="hid">
 						<a href="javascript:;">教科研成果</a>
 						<div class="sub-nav">
 							<a href="javascript:;">教师教科研立项</a>
 							<a href="javascript:;">学生科研立项</a>
 						</div>
 					</li>
-					<li>
+					<li class="hid">
 						<a href="javascript:;">教学资源</a>
 						<div class="sub-nav">
 							<a href="javascript:;">实验软件</a>
@@ -67,53 +67,32 @@
 							<a href="javascript:;">数据库资源</a>
 						</div>
 					</li>
-					<li><a href="javascript:;">规章制度</a></li>
-					<li><a href="javascript:;">合作交流</a></li>
+					<li class="hid"><a href="javascript:;">规章制度</a></li>
+					<li class="hid"><a href="javascript:;">合作交流</a></li>
 				</ul>
 			</div>
 		</div>
     </div>
 <!-- 轮播图 -->
-    <div class="banner">
-		<div class="banner-btn">
-			<!-- 焦点按钮 -->
-			<div class="focus">
-				<span class="active"></span>
-				<span class=""></span>
-				<span class=""></span>
-				<span class=""></span>
-			</div>
-			<!-- 切换按钮 -->
-			<div class="switch">
-				<div class="left">
-					<img src="images/switch-left.png">
-				</div>
-				<div class="right">
-					<img src="images/switch-right.png">
-				</div>
-			</div>
-			<div class="imglist">
-				<ul>
-					<li>
-						<a href=""><img src="images/scroll1.png"></a>
-						<!-- <p class="img-title">经济管理实验(实训)中心</p> -->
-					</li>
-					<li>
-						<a href=""><img src="images/scroll1.png"></a>
-						<!-- <p class="img-title">经济管理实验(实训)中心</p> -->
-					</li>
-					<li>
-						<a href=""><img src="images/scroll1.png"></a>
-						<!-- <p class="img-title">经济管理实验(实训)中心</p> -->
-					</li>
-					<li>
-						<a href=""><img src="images/scroll1.png"></a>
-						<!-- <p class="img-title">经济管理实验(实训)中心</p> -->
-					</li>
-				</ul>
-			</div>
-		</div>
-    </div>
+    <div id="banner">
+  <div id="banner_bg"></div>
+  <!--标题背景-->
+  <div id="banner_info"></div>
+  <!--标题-->
+  <ul>
+    <li class="on">1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+  <div id="banner_list">
+  		<a href="#"><img src="images/scroll1.png" title="淮南师范学院经济管理学院" alt="淮南师范学院经济管理学院" /></a> 
+    	<a href="#"><img src="images/scroll1.png" title="明德 至善 " alt="明德 至善"/></a> 
+    	<a href="#"><img src="images/scroll1.png" title="博学 笃行" alt="博学 笃行"/></a> 
+    	<a href="#"><img src="images/scroll1.png" title="淮南师范学院经济管理学院4" alt="淮南师范学院经济管理学院4"/></a> 
+ </div>
+
+</div>
     <!-- 主体 -->
     <div class="content">
 		<div class="container">
@@ -245,6 +224,37 @@
 	$(document).ready(function(){
 	    $("#callboard").Scroll({line:1,speed:500,timer:3000});
 	});
+	var t = n =0, count;
+	$(document).ready(function(){ 
+	count=$("#banner_list a").length;
+	$("#banner_list a:not(:first-child)").hide();
+	$("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
+	$("#banner li").click( function() {
+			var i = $(this).text() -1;//获取Li元素内的值，即1，2，3，4
+			n = i;
+			if (i >= count) return;
+	$("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
+	$("#banner_info").unbind().click(function(){
+		window.open($("#banner_list a").eq(i).attr('href'), "_blank")
+})
+	$("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+	document.getElementById("banner").style.background="";
+	$(this).toggleClass("on");
+	$(this).siblings().removeAttr("class");
+});
+	t = setInterval("showAuto()", 4000);
+	$("#banner").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 2000);});
+	})
 
+	function showAuto()
+	{
+		n = n >=(count -1) ?0 : ++n;
+		$("#banner li").eq(n).trigger('click');
+	}
+	$('.hid').hover(function(){
+		$(this).find('.sub-nav').stop().slideToggle(300);
+	}, function(){
+		$(this).find('.sub-nav').stop().slideToggle(300);
+	})
 </script>
 </html>
