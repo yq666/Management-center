@@ -101,16 +101,34 @@
 				<img class="video-img1" src="images/video.jpg">
 				<div class="bd1"></div>
 				<p>中心视频</p>
-				<img class="video-img2 bd2" src="images/bofang1.png" data-toggle="modal" data-target=".bs-example-modal-lg">
+				<img  id="playvideo" class="video-img2 bd2" src="images/bofang1.png" data-toggle="modal" data-target=".bs-example-modal-lg">
 			</div>
-			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="images/close.png"></span></button>
+			<div class=" test1 modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  				<button  id="stopvideo" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="images/close.png"></span></button>
   				<div class="modal-dialog modal-lg" role="document">
     				<div class="modal-content">
-      					<video src="images/社会主义核心价值观从我做起.mp4"  controls="controls"></video>
+      					<video id="myVideo" src="images/社会主义核心价值观从我做起.mp4"  controls="controls"></video>
     				</div>
   				</div>
 			</div>
+			<!-- 视频js -->
+			<script>    
+			
+				document.getElementById('stopvideo').onclick=function(){
+					document.getElementById('myVideo').pause();
+				}
+				document.getElementById('playvideo').onclick=function(){
+					document.getElementById('myVideo').play();
+				}
+			// 	$(function(){ 
+			// 	$(document).bind("click",function(e){ 
+			// 		var target = $(e.target); 
+			// 		if(target.closest(".myVideo").length == 0){ 
+			// 			document.getElementById('myVideo').pause();
+			// 		} 
+			// 	}) 
+			// }) 
+			</script>
 		<!-- 模块 -->
 			<div class="modular col-lg-5">
 				<div class="modular1"><a href="#"><img src="images/qq.jpg"><h4>中心介绍</h4></a></div>

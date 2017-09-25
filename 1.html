@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript" src="js/jquery-1.4.4.min.js" ></script>
+<title></title>
+</head>
+<style type="text/css">
+body
+{
+background-color:#999999;
+}
+ 
+#myDiv
+{
+background-color:#FFFFFF;
+width:250px;
+height:250px;
+display:none;
+　　　　　　}
+　　</style>
+<body>
+<input id="btn" type="button" value="显示DIV" />
+ 
+<div id="myDiv">
+This is a div;
+</div>
+ 
+</body>
+ 
+<script type="text/javascript">
+　　　　var myDiv = $("#myDiv");
+$(function ()
+{
+$("#btn").click(function (event) 
+{
+showDiv();//调用显示DIV方法
+$(document).one("click", function () 
+{//对document绑定一个影藏Div方法
+$(myDiv).hide();
+});
+ 
+event.stopPropagation();//阻止事件向上冒泡
+});
+$(myDiv).click(function (event) 
+{
+ 
+event.stopPropagation();//阻止事件向上冒泡
+});
+});
+　　　　function showDiv() 
+{
+$(myDiv).fadeIn();
+}
+</script>
