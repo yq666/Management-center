@@ -20,17 +20,16 @@ li{
     position: relative; 
     width: 100%; 
     height:350px; 
-    border: 1px solid #666; 
     overflow: hidden; 
 }
 #banner_list{
     height: 100%;
     position: relative;
 }
-#banner_list img { 
-    border: 0px;
+#banner_list img {
     height: 100%;  
     width: 100%;
+    border: 0px;
 }
 #banner_bg { 
     position: absolute;
@@ -49,10 +48,10 @@ li{
     left: 5px; 
     color: #fff;
     padding: 10px;
-    z-index: 1001; 
-    background-color:#000;
+    z-index: 1001;
     opacity: 0.7;
-    cursor: pointer;
+    cursor: pointer; 
+    background-color: #000;
 }
 
 #banner_text { 
