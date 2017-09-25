@@ -309,6 +309,9 @@ video{
     padding: 0px 30px;
     text-decoration: none;
 }
+.footer-link ul li a:hover{
+    text-decoration: underline;
+}
 .footer-logo{
     margin-top: 25px;
 }
