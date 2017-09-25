@@ -5,7 +5,7 @@
  * @date    2017-09-21 15:11:41
  * @version $Id$
  */
-*{
+*{  
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
@@ -20,16 +20,19 @@ li{
     position: relative; 
     width: 100%; 
     height:350px; 
+    border: 1px solid #666; 
     overflow: hidden; 
 }
-#banner_list{
+#banner_list{  
+    overflow: hidden;
+    width: 100%;
     height: 100%;
     position: relative;
 }
-#banner_list img {
+#banner_list img { 
+    border: 0px;
     height: 100%;  
     width: 100%;
-    border: 0px;
 }
 #banner_bg { 
     position: absolute;
@@ -48,10 +51,10 @@ li{
     left: 5px; 
     color: #fff;
     padding: 10px;
-    z-index: 1001;
+    z-index: 1001; 
+    background-color:#000;
     opacity: 0.7;
-    cursor: pointer; 
-    background-color: #000;
+    cursor: pointer;
 }
 
 #banner_text { 
@@ -67,6 +70,7 @@ li{
 }
 
 #banner_list a { 
+    width: 100%;
     position: absolute; 
 }
 #banner ul { 
