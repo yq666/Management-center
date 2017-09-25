@@ -10,26 +10,25 @@
     margin: 0px;
     box-sizing: border-box;
 }
-a:hover{
-    text-decoration:none;
-}
-li{
+li {
     list-style: none;
 }
-#banner { 
+#banner{ 
     position: relative; 
     width: 100%; 
-    height:350px; 
+    height:350px;
     overflow: hidden; 
 }
-#banner_list{
+#banner_list{  
+    overflow: hidden;
+    width: 100%;
     height: 100%;
     position: relative;
 }
-#banner_list img {
+#banner_list img { 
+    border: 0px;
     height: 100%;  
     width: 100%;
-    border: 0px;
 }
 #banner_bg { 
     position: absolute;
@@ -48,10 +47,10 @@ li{
     left: 5px; 
     color: #fff;
     padding: 10px;
-    z-index: 1001;
+    z-index: 1001; 
+    background-color:#000;
     opacity: 0.7;
-    cursor: pointer; 
-    background-color: #000;
+    cursor: pointer;
 }
 
 #banner_text { 
@@ -67,6 +66,7 @@ li{
 }
 
 #banner_list a { 
+    width: 100%;
     position: absolute; 
 }
 #banner ul { 
@@ -301,6 +301,138 @@ li{
 .header .nav .sub-nav a:hover{
     background: #337ab0;
 }
+/*底部*/
+.footer{
+    width: 100%;
+    height: 160px;
+    background-color: #1A83C5;
+}
+.footer-box{    
+    padding-top: 20px;
+    height: 160px;
+}
+.footer-link ul li{
+    float: left;
+    line-height: 30px;
+    position: relative;
+}
+.footer-link ul li a {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    padding: 0px 30px;
+    text-decoration: none;
+}
+.footer-link ul li a:hover{
+    text-decoration: underline;
+}
+.footer-logo{
+    margin-top: 25px;
+}
+.footer-logo img{
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+.footer-logo p{
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-left: 20px;
+    letter-spacing:2px;
+}
+.about ul li{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.footer-copy p{
+    text-align: center;
+    background: #333;
+    color: #bababa;
+    font-size: 12px;
+    min-height: 30px;
+    line-height: 30px;
+    margin:0;
+}
+.footer-copy a{
+    color: #fff;
+}
+
+.footer{
+    width: 100%;
+    height: 160px;
+    background-color: #1A83C5;
+}
+
+.footer-box{
+    padding-top: 20px;
+    height: 160px;
+}
+
+.footer-link ul li{
+    float: left;
+    line-height: 30px;
+    position: relative;
+}
+
+.footer-link ul li a{
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    padding: 0px 30px;
+    text-decoration: none;
+}
+
+.footer-link ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer-logo{
+    margin-top: 25px;
+}
+
+.footer-logo img{
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.footer-logo p{
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+
+.about ul li{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-copy p{
+    text-align: center;
+    background: #333;
+    color: #bababa;
+    font-size: 12px;
+    min-height: 30px;
+    line-height: 30px;
+    margin: 0;
+}
+
+.footer-copy a{
+    color: #fff;
+}
 
 
 .photo_box{
@@ -348,3 +480,4 @@ li{
 .right_content >h3{
     text-align: center;
 }
+

@@ -1,0 +1,37 @@
+.news_box .newsphoto_box{
+	height: 100px;
+}
+.news_box .newsphoto_box img{
+	height: 100%;
+	width: 100%;
+}
+.news_box .newstongzhi_box .time{
+	margin: 0;
+}
+.news_box .newstongzhi_box>span{
+	font-size: 16px;
+	font-weight: 550;
+}
+.news_box .newstongzhi_box .neirong{
+    overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.news_box ul li{
+	padding-top: 20px;
+	border-bottom:1px dotted #dbd4cd;
+}
+.news_box ul li a{
+	color: #333;
+}
+.news_box ul li a:hover{
+	color: #999;
+}
+.news_box .bs-example{
+	text-align: center;
+}
+.title_list .new_dongtai>a{
+	color: #777;
+}

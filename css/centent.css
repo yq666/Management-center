@@ -1,0 +1,35 @@
+.photo_box{
+	margin: 0;
+}
+.content_box{
+	padding-top: 20px;
+	background-color: #f5f5f5;
+}
+.content_title{
+	background-color:#fff; 
+}
+.content_title h1{
+	text-align: center;
+}
+.content_title .info{
+    border-bottom: 1px dashed #eee;
+	padding: 20px;
+	text-align: center;
+}
+.content_title .info span{
+	padding-left: 15px;
+}
+.content_title .body{
+	text-align: center;
+}
+.content_title .body .head_title{
+	padding:15px;
+}
+.content_title .body .head_title span{
+	padding-left: 20px;
+}
+.content_title .trief{
+    min-height: 100px;
+    padding: 0 80px;
+	text-align: center;
+}
