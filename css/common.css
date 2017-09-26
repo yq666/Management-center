@@ -77,7 +77,6 @@ li {
     font-size: 16px;
 }
 .header .nav{
-    height: 45px;
     float: left;
     color: #fff;
     background-color: #1A83C5;
@@ -88,8 +87,8 @@ li {
     list-style: none;
     float: left;
     line-height: 45px;
-    margin-left: 7px;
     position: relative;
+    margin-left: 7px;
 }
 .header .nav ul li .active{
     background: #337ab0;
@@ -98,8 +97,8 @@ li {
     color:#fff;
     display:block;
     font-size: 16px;
-    padding:0px 35px;
     text-decoration:none;
+    padding:0px 34px;
 }
 .header .nav ul li:hover a{
     /*color: #000;*/
@@ -130,11 +129,11 @@ li {
 /*底部*/
 .footer{
     width: 100%;
-    height: 170px;
+    min-height: 170px;
     background-color: #1A83C5;
 }
 .footer-box{    
-    padding-top: 30px;
+    padding-top: 30px;    
     height: 170px;
 }
 .footer-link ul li{
@@ -146,8 +145,8 @@ li {
     color: #fff;
     display: block;
     font-size: 14px;
-    padding: 0px 30px;
     text-decoration: none;
+    padding: 0px 30px;
 }
 .footer-link ul li a:hover{
     text-decoration: underline;
@@ -167,7 +166,7 @@ li {
     color: #fff;
     font-weight: bold;
     padding-top: 30px;
-    padding-left: 20px;
+    padding-left: 10px;
     letter-spacing:2px;
 }
 .about ul li{
@@ -188,4 +187,61 @@ li {
 .footer-copy a{
     color: #fff;
 }
-/**/
+/*返回顶部*/
+.backToTop {
+    display: none;
+    width:35px;
+    line-height: 1.2;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    position: fixed;
+    _position: absolute;
+    right: 30px;
+    bottom: 30px;
+    _bottom: "auto";
+    cursor: pointer;
+    opacity: .6;
+    filter: Alpha(opacity=60);
+}
+.center_content{
+    margin-bottom: 20px;
+}
+/*媒体查询*/
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+    .footer-logo img{
+        width: 60px;
+        height: 60px;
+    }
+    .footer-logo p{
+        font-size: 16px;
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .search{
+        display: none;
+    }
+    .footer-link ul li a{
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+    .footer-logo img{
+        margin-left: 65px;
+    }
+    .footer-logo p{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .logo-title img{
+        display: none;
+    }
+    .logo-title p{
+        margin-left:10px;
+        font-size: 26px;
+    }
+}
