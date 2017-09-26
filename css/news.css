@@ -8,7 +8,7 @@
 .news_box .newstongzhi_box .time{
 	margin: 0;
 }
-.news_box .newstongzhi_box>span{
+.news_box .newstongzhi_box a>span{
 	font-size: 16px;
 	font-weight: 550;
 }
@@ -19,10 +19,7 @@
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 }
-.news_box ul li{
-	padding-top: 20px;
-	border-bottom:1px dotted #dbd4cd;
-}
+
 .news_box ul li a{
 	color: #333;
 }
@@ -34,4 +31,21 @@
 }
 .title_list .new_dongtai>a{
 	color: #777;
+}
+.newsphoto_box{ 
+	float: left;
+}
+.newstongzhi_box {
+	float: left;
+}
+.left_box{
+	float: left
+}
+.right_box{
+	float: right;
+}
+.news_box ul li{
+	float: left;
+	padding-top: 20px;
+	border-bottom:1px dotted #dbd4cd;
 }
