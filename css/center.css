@@ -9,8 +9,13 @@
  text-align: center;
  position: fixed;
  _position: absolute;
+<<<<<<< HEAD
  right: 15px;
  bottom: 40px;
+=======
+ right: 30px;
+ bottom: 30px;
+>>>>>>> 207c9a5757821af6f9ec52fc23828b57fed43f73
  _bottom: "auto";
  cursor: pointer;
  opacity: .6;

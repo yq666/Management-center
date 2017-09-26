@@ -13,6 +13,12 @@
 	<link href="./css/common.css" rel="stylesheet">
 	<link href="./css/index.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/center.css">
+
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" media="all">
+      <link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+      <!-- Bootstrap bootstrap-touch-slider Slider Main Style Sheet -->
+      <link href="css/bootstrap-touch-slider.css" rel="stylesheet" media="all">
 </head>
 <body>
 <!-- 头部 -->
@@ -77,24 +83,65 @@
 		</div>
     </div>
 <!-- 轮播图 -->
-    <div id="banner">
-  <div id="banner_bg"></div>
-  <!--标题背景-->
-  <div id="banner_info"></div>
-  <!--标题-->
-  <ul>
-    <li class="on">1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-  </ul>
-  <div id="banner_list">
-  		<a href="#"><img src="images/scroll1.png" title="淮南师范学院经济管理学院" alt="淮南师范学院经济管理学院" /></a> 
-    	<a href="#"><img src="images/scroll1.png" title="明德 至善 " alt="明德 至善"/></a> 
-    	<a href="#"><img src="images/scroll1.png" title="博学 笃行" alt="博学 笃行"/></a> 
-    	<a href="#"><img src="images/scroll1.png" title="淮南师范学院经济管理学院4" alt="淮南师范学院经济管理学院4"/></a> 
- </div>
-</div>
+		<div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+	            <ol class="carousel-indicators">
+	                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+	                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+	                <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+	            </ol>
+	            <div class="carousel-inner" role="listbox">
+	                <div class="item active">
+	                    <img src="images/slide1.jpeg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+	                    <div class="bs-slider-overlay"></div>
+	                    <div class="container">
+	                        <div class="row">
+	                            <div class="slide-text slide_style_left">
+	                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="item">
+	                    <img src="images/slide2.jpeg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+	                    <div class="bs-slider-overlay"></div>
+	                    <div class="container">
+	                        <div class="row">
+	                            <div class="slide-text slide_style_left">
+	                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+					<div class="item">
+	                    <img src="images/slide3.jpeg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+	                    <div class="bs-slider-overlay"></div>
+	                    <div class="container">
+	                        <div class="row">
+	                            <div class="slide-text slide_style_left">
+	                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+	                <span class="fa fa-angle-left" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	            </a>
+	            <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+	                <span class="fa fa-angle-right" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	            </a>
+	        </div> 
+	
+	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="http://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+       <script src="js/bootstrap-touch-slider.js"></script>
+       <script type="text/javascript">
+            $('#bootstrap-touch-slider').bsTouchSlider();
+        </script>
     <!-- 主体 -->
     <div class="content">
 		<div class="container">
@@ -105,7 +152,7 @@
 				<p>中心视频</p>
 				<img  id="playvideo" class="video-img2 bd2" src="images/bofang1.png" data-toggle="modal" data-target=".bs-example-modal-lg">
 			</div>
-			<div id="video_modal" class=" test1 modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			<div class=" test1 modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   				<button  id="stopvideo" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="images/close.png"></span></button>
   				<div class="modal-dialog modal-lg" role="document">
     				<div class="modal-content">
@@ -115,15 +162,12 @@
 			</div>
 			<!-- 视频播放js -->
 			<script>
-				var $videoModal = $('#video_modal');
-				var video = document.getElementById('myVideo');
-				$videoModal.on('hidden.bs.modal', function (e) {
-					video.pause();
-					video.currentTime = 0;
-				})
-				$videoModal.on('shown.bs.modal', function (e) {
-					video.play();
-				})
+				document.getElementById('stopvideo').onclick=function(){
+					document.getElementById('myVideo').pause();
+				}
+				document.getElementById('playvideo').onclick=function(){
+					document.getElementById('myVideo').play();	
+				}
 			</script>
 		<!-- 模块 -->
 			<div class="modular col-lg-5">
@@ -243,7 +287,7 @@
 		</div>
 		<div class="footer-copy">
 			<p>
-				版权所有：<span> Copyright © 2017 <a href="#">E8net</a>. powered by <a href="https://github.com/3tnettiny">tiny</a></span>
+				版权所有：<span> Copyright © 2017 <a href="http://e8net.cn">E8net</a>. powered by <a href="https://github.com/3tnettiny">tiny</a></span>
 			</p>
 		</div>
    	</div>
