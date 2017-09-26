@@ -23,7 +23,6 @@
                     } );
                 } );
             }
-
             //Variables on page load
             var $firstAnimatingElems = carousel.find( '.item:first' ).find( "[data-animation ^= 'animated']" );
             //Initialize carousel
@@ -48,8 +47,6 @@
 
         } );
     };
-
-
 } )( jQuery );
 
 

@@ -11,8 +11,12 @@
     <script type="text/javascript" src="./bootstrap-3.3.7-dist/js\jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="./bootstrap-3.3.7-dist/js\bootstrap.js"></script>
 	<link href="./css/common.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_428003_m1n2exs9719hehfr.css">
 	<link href="./css/index.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/center.css">
+	<link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" media="all">
+      <link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+      <link href="css/bootstrap-touch-slider.css" rel="stylesheet" media="all">
+</head>
 <body>
 <!-- 头部 -->
     <div class="header">
@@ -76,24 +80,68 @@
 		</div>
     </div>
 <!-- 轮播图 -->
-    <div id="banner">
-  <div id="banner_bg"></div>
-  <!--标题背景-->
-  <div id="banner_info"></div>
-  <!--标题-->
-  <ul>
-    <li class="on">1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-  </ul>
-  <div id="banner_list">
-  		<a href="#"><img src="images/scroll1.png" title="淮南师范学院经济管理学院" alt="淮南师范学院经济管理学院" /></a> 
-    	<a href="#"><img src="images/scroll1.png" title="明德 至善 " alt="明德 至善"/></a> 
-    	<a href="#"><img src="images/scroll1.png" title="博学 笃行" alt="博学 笃行"/></a> 
-    	<a href="#"><img src="images/scroll1.png" title="淮南师范学院经济管理学院4" alt="淮南师范学院经济管理学院4"/></a> 
- </div>
-</div>
+		<div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+	            <ol class="carousel-indicators">
+	                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+	                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+	                <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+	                <li data-target="#bootstrap-touch-slider" data-slide-to="3"></li>
+	            </ol>
+	            <div class="carousel-inner" role="listbox">
+	                <div class="item active">
+	                    <img src="images/scroll1.png" alt="Bootstrap Touch Slider"  class="slide-image"/>
+	                    <div class="bs-slider-overlay"></div>
+	                    <div class="container">
+	                        <div class="row">
+	                            <div class="slide-text slide_style_left">
+	                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="item">
+	                    <img src="images/scroll2.png" alt="Bootstrap Touch Slider"  class="slide-image"/>
+	                    <div class="bs-slider-overlay"></div>
+	                    <div class="container">
+	                        <div class="row">
+	                            <div class="slide-text slide_style_left">
+	                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+					<div class="item">
+	                    <img src="images/scroll3.png" alt="Bootstrap Touch Slider"  class="slide-image"/>
+	                    <div class="bs-slider-overlay"></div>
+	                    <div class="container">
+	                        <div class="row">
+	                            <div class="slide-text slide_style_left">
+	                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="item">
+	                    <img src="images/scroll4.png" alt="Bootstrap Touch Slider"  class="slide-image"/>
+	                    <div class="bs-slider-overlay"></div>
+	                    <div class="container">
+	                        <div class="row">
+	                            <div class="slide-text slide_style_left">
+	                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+	                <span class="fa fa-angle-left" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	            </a>
+	            <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+	                <span class="fa fa-angle-right" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	            </a>
+	        </div>
     <!-- 主体 -->
     <div class="content">
 		<div class="container">
@@ -247,6 +295,12 @@
 		</div>
    	</div>
 </body>
-<!-- 通知公告js -->
 <script type="text/javascript" src="js/move.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-3.1.1.min.js"><\/script>')</script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+<script src="js/bootstrap-touch-slider.js"></script>
+<script type="text/javascript">
+    $('#bootstrap-touch-slider').bsTouchSlider();
+</script>
 </html>
