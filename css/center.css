@@ -1,22 +1,3 @@
-/*返回顶部*/
-.backToTop {
- display: none;
- width:40px;
- line-height: 1.2;
- padding: 10px 0;
- background-color: #000;
- color: #fff;
- font-size: 14px;
- text-align: center;
- position: fixed;
- _position: absolute;
- right: 15px;
- bottom: 40px;
- _bottom: "auto";
- cursor: pointer;
- opacity: .6;
- filter: Alpha(opacity=60);
-}
 .photo_box{
 	overflow: hidden;
 }
