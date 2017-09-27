@@ -1,36 +1,10 @@
-
-// 	var t = n =0, count;
-// 	$(document).ready(function(){ 
-// 	count=$("#banner_list a").length;
-// 	$("#banner_list a:not(:first-child)").hide();
-// 	$("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
-// 	$("#banner li").click( function() {
-// 			var i = $(this).text() -1;//获取Li元素内的值，即1，2，3，4
-// 			n = i;
-// 			if (i >= count) return;
-// 	$("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
-// 	$("#banner_info").unbind().click(function(){
-// 		window.open($("#banner_list a").eq(i).attr('href'), "_blank")
-// })
-// 	$("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
-// 	document.getElementById("banner").style.background="";
-// 	$(this).toggleClass("on");
-// 	$(this).siblings().removeAttr("class");
-// });
-// 	t = setInterval("showAuto()", 4000);
-// 	$("#banner").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 3000);});
-// 	})
-
-// 	function showAuto()
-// 	{
-// 		n = n >=(count -1) ?0 : ++n;
-// 		$("#banner li").eq(n).trigger('click');
-// 	}
+// 导航
 	$('.hid').hover(function(){
 		$(this).find('.sub-nav').stop().slideToggle(300);
 	}, function(){
 		$(this).find('.sub-nav').stop().slideToggle(300);
 	})
+//  返回顶部
 	 var $backToTopTxt = "返回顶部", $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
         .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
             $("html, body").animate({ scrollTop: 0 }, 1000);
