@@ -1,4 +1,5 @@
 .news_box .newsphoto_box{
+
 	height: 100px;
 }
 .news_box .newsphoto_box img{
@@ -9,7 +10,7 @@
 	margin: 0;
 }
 .news_box .newstongzhi_box a>span{
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 550;
 }
 .news_box .newstongzhi_box .neirong{
@@ -36,6 +37,8 @@
 	float: left;
 }
 .newstongzhi_box {
+	padding-top: 5px;
+	padding-left: 230px;
 	float: left;
 }
 .left_box{
@@ -45,7 +48,25 @@
 	float: right;
 }
 .news_box ul li{
+	position: relative;
 	float: left;
 	padding-top: 20px;
+	padding-bottom: 20px;
 	border-bottom:1px dotted #dbd4cd;
+}
+.news_box ul li .cover{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 190px;
+    height: 120px;
+    display: block;
+    border-radius: 6px;
+}
+.news_box ul li .cover img{
+	width: 100%;
+	height: 100%;
+}
+.bs-example{
+	text-align: center;
 }
