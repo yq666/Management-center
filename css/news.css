@@ -48,11 +48,15 @@
 	float: right;
 }
 .news_box ul li{
+	width: 100%;
 	position: relative;
 	float: left;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 25px;
 	border-bottom:1px dotted #dbd4cd;
+}   
+.news_box ul li .newstongzhi_box>.neirong{
+ 	max-height: 64px;
+    min-height: 45px;
 }
 .news_box ul li .cover{
     position: absolute;
@@ -69,4 +73,7 @@
 }
 .bs-example{
 	text-align: center;
+}
+.news_box{
+	overflow: hidden;
 }
