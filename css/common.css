@@ -13,6 +13,9 @@
 li {
     list-style: none;
 }
+html,body{
+    font-family:"Microsoft YaHei", "SimHei", "SimSun";
+}
 /*头部*/
 .header{
     width: 100%;
@@ -23,27 +26,23 @@ li {
 }
 .header-title .logo{
     float: left;
-    width: 70px;
-    height: 70px;
-    margin-left: 40px;
+    margin-left: 25px;
 }
 .header-title .logo img{
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 .header-title .logo-title{
     padding-top: 10px;
 }
-.header-title .logo-title img{
-    float: left;
-}
 .header-title .logo-title p{
     display: block;
     float: left;
-    color: #1A83C5;
-    font-weight: bold;
+    color: #06325F;
     font-size: 30px;
     padding-top: 5px;
+    font-weight: bold;
+    font-family:"Microsoft YaHei", "SimHei", "SimSun";
 }
 .header-title .search{
     top: 39px;
@@ -70,7 +69,7 @@ li {
     text-align: center;
     position: absolute;
     right: 1px;
-    top: 4px;
+    top: 1px;
     color: #777;
     line-height: 30px;
     font-size: 16px;
@@ -78,16 +77,21 @@ li {
 .header .nav{
     float: left;
     color: #fff;
-    background-color: #1A83C5;
+    background-color: #06325f;
     width: 100%;
     margin-top: 20px;
+    text-align: center;
+}
+.header .nav ul{
+    display: inline-block;
+    margin-bottom: -5px;
 }
 .header .nav ul li{
     list-style: none;
     float: left;
     line-height: 45px;
     position: relative;
-    margin-left: 7px;
+    padding: 0 10px;
 }
 .header .nav ul li .active{
     background: #337ab0;
@@ -97,14 +101,14 @@ li {
     display:block;
     font-size: 16px;
     text-decoration:none;
-    padding:0px 34px;
+    width: 120px;
 }
 .header .nav ul li:hover a{
    color: #EED5D2;
 }
 .header .nav .sub-nav {
     top: 45px;
-    background-color: #1A83C5;
+    background-color: #06325f;
     z-index: 99;
     display: none;
     position: absolute;
@@ -128,12 +132,21 @@ li {
 /*底部*/
 .footer{
     width: 100%;
-    min-height: 170px;
-    background-color: #1A83C5;
+    min-height: 140px;
+    background-color: #06325F;
 }
 .footer-box{    
-    padding-top: 30px;    
-    height: 170px;
+    padding-top: 20px;    
+    text-align: center;    
+    min-height: 140px;
+}
+.footer-link{
+    min-height: 30px;
+    text-align: center;
+}
+.footer-box ul{
+    display: inline-block;
+    margin-bottom: 0px;
 }
 .footer-link ul li{
     float: left;
@@ -143,36 +156,26 @@ li {
 .footer-link ul li a {
     color: #fff;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
-    padding: 0px 30px;
+    padding: 0px 20px;
 }
 .footer-link ul li a:hover{
     text-decoration: underline;
 }
-.footer-logo{
-    margin-top: 25px;
+.about{
+    margin-top: 20px;
 }
-.footer-logo img{
-    width: 80px;
-    height: 80px;
-    float: left;
-}
-.footer-logo p{
-    display: block;
-    float: left;
-    font-size: 18px;
+.about p{
     color: #fff;
-    font-weight: bold;
-    padding-top: 30px;
-    padding-left: 10px;
-    letter-spacing:2px;
 }
 .about ul li{
     color: #fff;
     text-decoration: none;
     margin-bottom: 10px;
     font-size: 14px;
+    float: left;
+    margin-right: 15px;
 }
 .footer-copy p{
     text-align: center;
@@ -190,8 +193,6 @@ li {
 .backToTop {
     display: none;
     width:35px;
-    line-height: 1.2;
-    padding: 10px 0;
     background-color: #000;
     color: #fff;
     font-size: 12px;
@@ -204,12 +205,14 @@ li {
     cursor: pointer;
     opacity: .6;
     filter: Alpha(opacity=60);
+    line-height: 1.2;
+    padding: 5px 0;;;
 }
 .center_content{
     margin-bottom: 20px;
 }
 /*媒体查询*/
-@media screen and (max-width: 1200px) and (min-width: 1000px) {
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
     .footer-logo img{
         width: 60px;
         height: 60px;
@@ -217,6 +220,13 @@ li {
     .footer-logo p{
         font-size: 16px;
         padding-top: 20px;
+    }
+    .header .nav ul li{
+        padding: 0px;
+    }
+    .header .nav ul li a{
+        padding: 0 20px;
+        display: inline;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -226,6 +236,16 @@ li {
     .footer-link ul li a{
         padding: 0 15px;
     }
+   
+}
+@media screen and (max-width: 1000px) and (min-width: 990px) {
+    .header .nav ul li a{
+        padding: 0 15px;
+        font-size: 16px;
+    }
+    .header .nav .sub-nav a{
+        font-size: 12px;
+    }
 }
 @media screen and (max-width: 1000px) and (min-width: 768px) {
     .footer-logo img{
@@ -234,7 +254,18 @@ li {
     .footer-logo p{
         font-size: 16px;
     }
+   
 }
+@media screen and (max-width: 990px){
+     .header .nav ul li a{
+        padding: 0 15px;
+        font-size: 12px;
+    }
+    .header .nav .sub-nav a{
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .logo-title img{
         display: none;
@@ -242,5 +273,8 @@ li {
     .logo-title p{
         margin-left:10px;
         font-size: 26px;
+    }
+    .header-title .logo-title p{
+        font-size: 28px;
     }
 }

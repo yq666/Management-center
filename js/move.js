@@ -20,12 +20,14 @@
     $(function() { $backToTopFun(); });
 
 // 首页通知公告滚动
-	var $notice=$('#listbox')
-		setInterval(function(){
-			$notice.animate({
-				top:'-40px'
-			},300,function(){
-				$notice.append($notice.children().first());
-				$notice.css('top',0);
-			})
-		},2000)
+      $(function () {
+          var $notice = $('#listbox');
+          setInterval(function () {	
+              $notice.animate({
+                  top: '-40px'
+              }, 300,function () {
+                  $notice.append($notice.children().first());
+                  $notice.css('top', 0);
+              })
+          }, 3000)
+      })
